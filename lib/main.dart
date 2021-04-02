@@ -20,6 +20,7 @@ class MyApp extends StatelessWidget {
           primarySwatch: Colors.indigo,
           accentColor: Colors.amberAccent,
         ),
+        debugShowCheckedModeBanner: false,
         home: PlacesListScreen(),
         routes: {
           AddPlaceScreen.routeName: (context) => AddPlaceScreen(),
