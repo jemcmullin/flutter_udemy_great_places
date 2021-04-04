@@ -65,7 +65,7 @@ class _AddPlaceScreenState extends State<AddPlaceScreen> {
                 primary: Theme.of(context).accentColor,
                 onPrimary: Colors.black,
               ),
-              onPressed: () {},
+              onPressed: _savePlace,
             ),
           ],
         ),
