@@ -18,7 +18,7 @@ class PlacesListScreen extends StatelessWidget {
           ],
         ),
         body: Consumer<GreatPlaces>(
-          child: const Text('No Places Yet. Add a Place!'),
+          child: const Center(child: Text('No Places Yet. Add a Place!')),
           builder: (context, greatPlacesData, consumerChild) =>
               greatPlacesData.places.length <= 0
                   ? consumerChild

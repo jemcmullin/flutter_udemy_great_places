@@ -40,6 +40,7 @@ class _ImageInputState extends State<ImageInput> {
         Container(
           height: 200,
           width: 200,
+          alignment: Alignment.center,
           decoration: BoxDecoration(
             border: Border.all(width: 1, color: Colors.grey),
           ),
