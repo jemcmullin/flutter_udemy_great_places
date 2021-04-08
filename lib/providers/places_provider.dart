@@ -1,5 +1,7 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
+import 'package:path/path.dart' as path;
+import 'package:path_provider/path_provider.dart' as syspath;
 import '../models/place.dart';
 import '../helpers/db_helpers.dart';
 
@@ -27,12 +29,13 @@ class GreatPlaces with ChangeNotifier {
       {
         'id': newPlace.id,
         'name': newPlace.name,
-        'image': newPlace.image.path,
+        'image': path.basename(newPlace.image.path),
       },
     );
   }
 
   Future<void> fetchAndSetPlaces() async {
+    final appDir = await syspath.getApplicationDocumentsDirectory();
     final dataList = await DBHelper.getData('user_places');
     _places = dataList
         .map(
@@ -40,7 +43,7 @@ class GreatPlaces with ChangeNotifier {
             id: dataPlace['id'],
             name: dataPlace['name'],
             location: null,
-            image: File(dataPlace['image']),
+            image: File(path.join(appDir.path, dataPlace['image'])),
           ),
         )
         .toList();
