@@ -26,6 +26,10 @@
 	<string>Permission needed to add a photo.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>Permission needed to add a photo.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Need your location to find Great Place.</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Need your location to find Great Place.</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
