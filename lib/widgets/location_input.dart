@@ -5,6 +5,10 @@ import '../screens/map_screen.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 class LocationInput extends StatefulWidget {
+  final Function selectPlace;
+
+  const LocationInput(this.selectPlace);
+
   @override
   _LocationInputState createState() => _LocationInputState();
 }
