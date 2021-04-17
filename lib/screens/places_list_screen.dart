@@ -39,6 +39,8 @@ class PlacesListScreen extends StatelessWidget {
                                       greatPlacesData.places[index].image),
                                 ),
                                 title: Text(greatPlacesData.places[index].name),
+                                subtitle: Text(greatPlacesData
+                                    .places[index].location.address),
                                 onTap: () {}, //TODO: Go to Detail Page
                               ),
                             ),
